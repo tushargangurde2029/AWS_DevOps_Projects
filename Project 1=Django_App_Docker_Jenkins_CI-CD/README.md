@@ -340,6 +340,10 @@ sudo usermod -a -G docker jenkins
 
 After that restart the jenkins server by below command
 
+```
+sudo systemctl restart jenkins
+```
+
 All the steps are successfully completed
 
 Now try to change the code and push the changes to GIT
