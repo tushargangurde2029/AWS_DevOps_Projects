@@ -6,6 +6,8 @@
 * GitHub Account
 * Basic Knowledge about Docker & Jenkins
 
+![](Images/1.jpeg)
+
 ### Steps:-
 
 #### 1. Clone the Django TODO App
