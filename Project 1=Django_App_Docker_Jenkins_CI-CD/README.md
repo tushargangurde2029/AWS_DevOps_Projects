@@ -6,13 +6,14 @@
 * GitHub Account
 * Basic Knowledge about Docker & Jenkins
 
+### Steps:-
+
+#### 1. Clone the Django TODO App
+
 </br>
 <kbd align="center"><img src="Images/1.jpg"/></kbd>
 </br>
 
-### Steps:-
-
-#### 1. Clone the Django TODO App
 #### 2. Launch an EC2 Ubuntu Instance with access of HTTP & HTTPS
 #### 3. Install Jenkins on Ubuntu Machine
 #### 4. Setup Jenkins & Connect with GIT by Installing Github Integration
@@ -36,6 +37,9 @@ Go to your AWS Account & Launch an Ubuntu Instance
 Open EC2 -> Instances --> Launch an EC2 Instance
 Select Ubuntu Image
 
+</br>
+<kbd align="center"><img src="Images/2.jpg"/></kbd>
+</br>
 
 Provide Following Details
 Name = SampleDjangoApp
@@ -108,6 +112,9 @@ sudo systemctl status jenkins
 
 Now Goto Security Group of your EC2 Instance & provide below Inbound Rules & Save Changes
 
+</br>
+<kbd align="center"><img src="Images/3.jpg"/></kbd>
+</br>
 
 Now Open your Jenkins Server by Below Address
 
@@ -116,6 +123,10 @@ http:// [public-ip]:8080 /
 ```
 
 You can see below screen 
+
+</br>
+<kbd align="center"><img src="Images/4.jpg"/></kbd>
+</br>
 
 
 ### Step 4:
@@ -134,7 +145,15 @@ Check the Jenkins URL & click on Save & Finish
 
 Now Click on Start Using Jenkins you can see below screen 
 
+</br>
+<kbd align="center"><img src="Images/5.jpg"/></kbd>
+</br>
+
 Provide Item Name, we are using freestyle pipeline so choose freestyle project
+
+</br>
+<kbd align="center"><img src="Images/6.jpg"/></kbd>
+</br>
 
 Once Done Click on save
 
@@ -161,6 +180,10 @@ Now Go to your GitHub & provide the public key as
 cat id_rsa.pub
 ```
 
+</br>
+<kbd align="center"><img src="Images/7.jpg"/></kbd>
+</br>
+
 Copy that key and add to your GitHub SSH Keys Section
 
 
@@ -170,8 +193,15 @@ Go to your Project -->  Configure
 
 Check Github Project & Provide the Project URL
 
+</br>
+<kbd align="center"><img src="Images/8.jpg"/></kbd>
+</br>
+
 In Source Code Management select GIT and paste the repository URL 
 
+</br>
+<kbd align="center"><img src="Images/9.jpg"/></kbd>
+</br>
 
 Now in credentials click on add
 
@@ -184,8 +214,15 @@ In Private key select Entire Directly & paste your Private Key as we copied publ
 ```
 cat id_rsa
 ```
+</br>
+<kbd align="center"><img src="Images/10.jpg"/></kbd>
+</br>
 
 Once Done Check Specifier For me it's main
+
+</br>
+<kbd align="center"><img src="Images/11.jpg"/></kbd>
+</br>
 
 Now click on Save
 
@@ -194,6 +231,10 @@ After that click on Build Now
 You can see build is started Once Done open that build 
 
 Go to console output & copy the address
+
+</br>
+<kbd align="center"><img src="Images/12.jpg"/></kbd>
+</br>
 
 Now open your Instance & change Directory with
 
@@ -231,6 +272,9 @@ http:// [public-ip]:8000
 
 As you can see our application is running successfully 
 
+</br>
+<kbd align="center"><img src="Images/13.jpg"/></kbd>
+</br>
 
 ### Step 5:
 
@@ -241,15 +285,25 @@ Go to Jenkins --> Manage Jenkins --> Manage Plugins
 
 In Available Plugins search for GitHub Integration select the plugin & click on Install without restart
 
+</br>
+<kbd align="center"><img src="Images/14.jpg"/></kbd>
+</br>
 
 Once Installation is done go to your Jenkins & configure After Opening Configuration check the dialog box as shown in the image
 
+</br>
+<kbd align="center"><img src="Images/15.jpg"/></kbd>
+</br>
 
 Check the Dialog Box in build triggers section
 
 Once Done go to Build Steps section click on add build step 
 select execute shell
 And add the below commands as shown in the image
+
+</br>
+<kbd align="center"><img src="Images/16.jpg"/></kbd>
+</br>
 
 
 ```
@@ -271,6 +325,10 @@ Jenkins-URL/github-webhook/
 
 Refet the below Image for Configurations
 
+</br>
+<kbd align="center"><img src="Images/17.jpg"/></kbd>
+</br>
+
 After that click on Add Webhook
 
 Once Webhook is added go to your EC2 Instance give 
@@ -287,5 +345,12 @@ All the steps are successfully completed
 Now try to change the code and push the changes to GIT
 it will run a build and new docker image will be created & it will be automatically going to deploy on your EC2 Instance
 
+</br>
+<kbd align="center"><img src="Images/18.jpg"/></kbd>
+</br>
 
 As you can see in the above image build successfully run by github after pushing code and also title has been change and new image is deployed successfully.
+
+</br>
+<kbd align="center"><img src="Images/19.jpg"/></kbd>
+</br>
