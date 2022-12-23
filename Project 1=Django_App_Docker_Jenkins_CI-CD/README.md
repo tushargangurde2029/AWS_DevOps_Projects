@@ -6,7 +6,9 @@
 * GitHub Account
 * Basic Knowledge about Docker & Jenkins
 
-![](Images/1.jpeg)
+</br>
+<kbd align="center"><img src="Images/1.jpg"/></kbd>
+</br>
 
 ### Steps:-
 
