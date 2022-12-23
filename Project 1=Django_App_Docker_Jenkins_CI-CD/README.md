@@ -100,3 +100,188 @@ Check the Service Status
 ```
 sudo systemctl status jenkins
 ```
+
+
+Now Goto Security Group of your EC2 Instance & provide below Inbound Rules & Save Changes
+
+
+Now Open your Jenkins Server by Below Address
+
+```
+http:// [public-ip]:8080 /
+```
+
+You can see below screen 
+
+
+### Step 4:
+
+Now Locate your Jenkins Administrator password by command
+
+
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+
+Enter that password & select Install Suggested Plugins Once Done Provide the Necessary Details & click on Save & Continue
+
+Check the Jenkins URL & click on Save & Finish
+
+Now Click on Start Using Jenkins you can see below screen 
+
+Provide Item Name, we are using freestyle pipeline so choose freestyle project
+
+Once Done Click on save
+
+Before Configuring lets connect Jenkins with GIT using SSH
+
+Go to your EC2 Instance & run below command
+
+```
+ssh-keygen
+```
+
+
+It will generate public & private key provide public key to GitHub & provide private key for Jenkins
+Access the keys changing the directory to
+
+```
+cd .ssh
+ls
+```
+
+
+Now Go to your GitHub & provide the public key as
+```
+cat id_rsa.pub
+```
+
+Copy that key and add to your GitHub SSH Keys Section
+
+
+As you can see i have added the SSH key for the GitHub
+Now similarly add private key to your Jenkins
+Go to your Project -->  Configure
+
+Check Github Project & Provide the Project URL
+
+In Source Code Management select GIT and paste the repository URL 
+
+
+Now in credentials click on add
+
+Provide the Details
+In kind select SSH with Private Key
+Username select as Ubuntu  -->  Username of EC2 Instance
+
+In Private key select Entire Directly & paste your Private Key as we copied public key
+
+```
+cat id_rsa
+```
+
+Once Done Check Specifier For me it's main
+
+Now click on Save
+
+After that click on Build Now
+
+You can see build is started Once Done open that build 
+
+Go to console output & copy the address
+
+Now open your Instance & change Directory with
+
+```
+cd /var/lib/jenkins/workspace/Item-Name(For me its sample-todo)
+```
+
+After that run ls you can see our project is present now lets install docker and build the docker image by following commands 
+
+
+```
+sudo apt install docker.io
+```
+
+Once Docker is Installed build Image by following Command
+
+```
+sudo docker build . -t todo
+```
+
+After Successfully image is built run the image by
+
+```
+sudo docker run --name todo -d -p 8000:800 todo
+```
+
+Here Container-name --> todo , -d --> detached mode , -p -->Expose port 8000
+
+
+Verify the application is running or not by below URL
+
+```
+http:// [public-ip]:8000
+```
+
+As you can see our application is running successfully 
+
+
+### Step 5:
+
+Let's add a git webhook to implement Continuous Delivery
+
+First Install GitHub Integration Plugin For Jenkins
+Go to Jenkins --> Manage Jenkins --> Manage Plugins
+
+In Available Plugins search for GitHub Integration select the plugin & click on Install without restart
+
+
+Once Installation is done go to your Jenkins & configure After Opening Configuration check the dialog box as shown in the image
+
+
+Check the Dialog Box in build triggers section
+
+Once Done go to Build Steps section click on add build step 
+select execute shell
+And add the below commands as shown in the image
+
+
+```
+docker kill todo
+docker rm todo
+docker build . -t todo
+docker run --name todo -p 8000:8000 -d todo
+```
+
+
+After that click on save 
+
+Now go to your GitHub open project repository click on Settings
+In settings click on --> WebHook --> Add Webhook
+Provide the Payload URL as
+
+Jenkins-URL/github-webhook/
+
+
+Refet the below Image for Configurations
+
+After that click on Add Webhook
+
+Once Webhook is added go to your EC2 Instance give 
+Jenkins access to run Docker commands by below command 
+
+```
+sudo usermod -a -G docker jenkins
+```
+
+After that restart the jenkins server by below command
+
+All the steps are successfully completed
+
+Now try to change the code and push the changes to GIT
+it will run a build and new docker image will be created & it will be automatically going to deploy on your EC2 Instance
+
+
+As you can see in the above image build successfully run by github after pushing code and also title has been change and new image is deployed successfully.
