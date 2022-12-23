@@ -42,8 +42,11 @@ Select Ubuntu Image
 </br>
 
 Provide Following Details
+
 Name = SampleDjangoApp
+
 Instance Type = t2.micro
+
 Allow HTTP & HTTPS Traffic From Internet
 
 Once Done Launch Your EC2 Instance
