@@ -114,9 +114,9 @@ Go to your AWS Console -> CloudFront -> Create Distribution
 
 Provide the Origin Domain as your S3 Bucket 
 
-Provide the Viewer protocol policy as shown in the image
+Provide the Origin Access as shown in image & select your Bucket
 
-as we are going to redirect the traffic to HTPS
+Provide the Viewer protocol policy as shown in the image as we are going to redirect the traffic to HTPS
 
 Add your Alternate Domain Name 
 
@@ -158,7 +158,6 @@ Finally click on Create Records
 
 Refer the above Image for Configurations
 
-Provide the Origin Access as shown in image & select your Bucket
 
 ### Step 9:-
 
