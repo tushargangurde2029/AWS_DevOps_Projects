@@ -149,14 +149,14 @@ You can see your Request status as "Pending Validation"
 Open that Certificate & click on created records in Route53 as shown in the below image
 
 </br>
-<kbd align="center"><img src="Images/11.jpg"/></kbd>
+<kbd align="center"><img src="Images/12.jpg"/></kbd>
 </br>
 
 
 After that click on Create Records
 
 </br>
-<kbd align="center"><img src="Images/12.jpg"/></kbd>
+<kbd align="center"><img src="Images/13.jpg"/></kbd>
 </br>
 
 
