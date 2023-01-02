@@ -148,7 +148,17 @@ You can see your Request status as "Pending Validation"
 
 Open that Certificate & click on created records in Route53 as shown in the below image
 
+</br>
+<kbd align="center"><img src="Images/11.jpg"/></kbd>
+</br>
+
+
 After that click on Create Records
+
+</br>
+<kbd align="center"><img src="Images/12.jpg"/></kbd>
+</br>
+
 
 After few minutes you can see your Certificate status as "Issued"
 
@@ -160,13 +170,38 @@ Go to your AWS Console -> CloudFront -> Create Distribution
 
 Provide the Origin Domain as your S3 Bucket 
 
+</br>
+<kbd align="center"><img src="Images/13.jpg"/></kbd>
+</br>
+
+
 Provide the Origin Access as shown in image & select your Bucket
 
-Provide the Viewer protocol policy as shown in the image as we are going to redirect the traffic to HTPS
+</br>
+<kbd align="center"><img src="Images/14.jpg"/></kbd>
+</br>
+
+
+Provide the Viewer protocol policy as shown in the image as we are going to redirect the traffic to HTTPS
+
+</br>
+<kbd align="center"><img src="Images/15.jpg"/></kbd>
+</br>
+
 
 Add your Alternate Domain Name 
 
+</br>
+<kbd align="center"><img src="Images/16.jpg"/></kbd>
+</br>
+
+
 Add your SSL Certificate
+
+</br>
+<kbd align="center"><img src="Images/17.jpg"/></kbd>
+</br>
+
 
 Finally click on Create Distribution
 
@@ -177,6 +212,11 @@ Let's Set Bucket Policy to allow cloudfront to access s3
 Go to Buckets -> Open the Bucket we have created
 
 Go to Permission -> Edit Bucket Policy
+
+</br>
+<kbd align="center"><img src="Images/18.jpg"/></kbd>
+</br>
+
 
 As shown in the image give the same policy edit the provided info as per your bucket and cloudfront distribution
 
@@ -202,6 +242,11 @@ choose distribution that we have created
 
 Finally click on Create Records 
 
+</br>
+<kbd align="center"><img src="Images/19.jpg"/></kbd>
+</br>
+
+
 Refer the above Image for Configurations
 
 
@@ -215,10 +260,20 @@ we have created
 
 Open Error Pages click on Create custom error response
 
+</br>
+<kbd align="center"><img src="Images/20.jpg"/></kbd>
+</br>
+
+
 After that click on Save Changes if we anything like
 
 URL/random_string
 
 we can see the error Page
+
+</br>
+<kbd align="center"><img src="Images/21.jpg"/></kbd>
+</br>
+
 
 Now you can visit your Website & its Completely hostedby the AWS.
