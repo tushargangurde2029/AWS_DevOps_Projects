@@ -11,6 +11,11 @@
 
 #### 1. Create your own Resume/Portfolio Website or Clone the sample repository created for this project.
 
+</br>
+<kbd align="center"><img src="Images/1.jpg"/></kbd>
+</br>
+
+
 #### 2. Create a New S3 Bucket & Upload your Resume Website Files.
 
 #### 3. Enable S3 Static Website Hosting Feature
