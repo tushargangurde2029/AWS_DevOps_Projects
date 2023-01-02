@@ -171,35 +171,35 @@ Go to your AWS Console -> CloudFront -> Create Distribution
 Provide the Origin Domain as your S3 Bucket 
 
 </br>
-<kbd align="center"><img src="Images/13.jpg"/></kbd>
+<kbd align="center"><img src="Images/14.jpg"/></kbd>
 </br>
 
 
 Provide the Origin Access as shown in image & select your Bucket
 
 </br>
-<kbd align="center"><img src="Images/14.jpg"/></kbd>
+<kbd align="center"><img src="Images/15.jpg"/></kbd>
 </br>
 
 
 Provide the Viewer protocol policy as shown in the image as we are going to redirect the traffic to HTTPS
 
 </br>
-<kbd align="center"><img src="Images/15.jpg"/></kbd>
+<kbd align="center"><img src="Images/16.jpg"/></kbd>
 </br>
 
 
 Add your Alternate Domain Name 
 
 </br>
-<kbd align="center"><img src="Images/16.jpg"/></kbd>
+<kbd align="center"><img src="Images/17.jpg"/></kbd>
 </br>
 
 
 Add your SSL Certificate
 
 </br>
-<kbd align="center"><img src="Images/17.jpg"/></kbd>
+<kbd align="center"><img src="Images/18.jpg"/></kbd>
 </br>
 
 
@@ -214,7 +214,7 @@ Go to Buckets -> Open the Bucket we have created
 Go to Permission -> Edit Bucket Policy
 
 </br>
-<kbd align="center"><img src="Images/18.jpg"/></kbd>
+<kbd align="center"><img src="Images/19.jpg"/></kbd>
 </br>
 
 
@@ -243,7 +243,7 @@ choose distribution that we have created
 Finally click on Create Records 
 
 </br>
-<kbd align="center"><img src="Images/19.jpg"/></kbd>
+<kbd align="center"><img src="Images/20.jpg"/></kbd>
 </br>
 
 
@@ -261,7 +261,7 @@ we have created
 Open Error Pages click on Create custom error response
 
 </br>
-<kbd align="center"><img src="Images/20.jpg"/></kbd>
+<kbd align="center"><img src="Images/21.jpg"/></kbd>
 </br>
 
 
@@ -272,7 +272,7 @@ URL/random_string
 we can see the error Page
 
 </br>
-<kbd align="center"><img src="Images/21.jpg"/></kbd>
+<kbd align="center"><img src="Images/22.jpg"/></kbd>
 </br>
 
 
