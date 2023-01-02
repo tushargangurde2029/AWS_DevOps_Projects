@@ -1,5 +1,9 @@
 # Project: Host a Static Website (RESUME) on AWS with S3, Cloud-Front, Route53    
 
+</br>
+<kbd align="center"><img src="Images/0.jpg"/></kbd>
+</br>
+
 ## Pre-requisites:-
 
 * AWS Account
