@@ -43,9 +43,21 @@ Note:Before Proceeding you should have your custom Domain you can buy a new doma
 ### Step 2:
 Let's Create a new S3 Bucket and upload our Resume Files Go to your AWS Console & Open S3 & click on Create Bucket
 
+</br>
+<kbd align="center"><img src="Images/2.jpg"/></kbd>
+</br>
+
 Provide Bucket Name & choose Your Region 
 
+</br>
+<kbd align="center"><img src="Images/3.jpg"/></kbd>
+</br>
+
 For Security reasons block Public Access we are going to use CloudFront for Serve the Website
+
+</br>
+<kbd align="center"><img src="Images/4.jpg"/></kbd>
+</br>
 
 We are using Server-Side encryption with Amazon S3-Manged  Keys to reduce overhead of key management
 
@@ -53,7 +65,17 @@ After that click on Create Bucket & open your Bucket
 
 Upload your Resume Website Files
 
+</br>
+<kbd align="center"><img src="Images/5.jpg"/></kbd>
+</br>
+
+
 Finally Upload your Website Files
+
+</br>
+<kbd align="center"><img src="Images/6.jpg"/></kbd>
+</br>
+
 
 You can see I have Successfully Uploaded My Website Files
 
@@ -64,6 +86,10 @@ Now Let's Enable S3 Static Website Hosting Feature
 Go to your Bucket -> Properties -> Static Website Hosting
 
 as shown in below image edit & enable feature
+
+</br>
+<kbd align="center"><img src="Images/7.jpg"/></kbd>
+</br>
 
 Provide Your Index Document for me its index.html
 
@@ -77,6 +103,11 @@ Go to Route53 in AWS -> Hosted Zone
 
 Create a new Hosted Zone
 
+</br>
+<kbd align="center"><img src="Images/8.jpg"/></kbd>
+</br>
+
+
 Provide Your Domain Name & Click on Create Hosted Zone
 
 Now Let's Connect our domain to Route53
@@ -89,6 +120,11 @@ Go to your Domain Management & add 4 NameServers
 
 as shown in the below image
 
+</br>
+<kbd align="center"><img src="Images/9.jpg"/></kbd>
+</br>
+
+
 You have successfully created your domain to Route53
 
 ### Step 5:-
@@ -100,6 +136,11 @@ Go to your AWS Console -> Certificate Manager
 Click on List Certificates -> Request
 
 You can see below screen click on next
+
+</br>
+<kbd align="center"><img src="Images/10.jpg"/></kbd>
+</br>
+
 
 Provide your domain name let all the configurations as it is and click on Request
 
