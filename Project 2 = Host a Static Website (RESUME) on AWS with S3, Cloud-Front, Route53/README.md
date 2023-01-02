@@ -90,3 +90,28 @@ As shown in the image give the same policy edit the provided
 info as per your bucket and cloudfront distribution
 After that click on Save Changes 
 Step 8:
+Now Let's Connect our CloudFront to Route53
+Go to Route53 -> Hosted Zone -> Open hosted zone that
+we have created
+After that click on Create Record
+Record Type -> A
+Alias -> should be enable
+Route Traffic to -> Alias to cloudfront distribution
+choose distribution that we have created
+Finally click on Create Records 
+Refer the above Image for Configurations
+Provide the Origin Access as shown in image & select your
+Bucket
+Step 9:-
+Let's add a error page so that if any error request occurs
+users should redirect to error page
+Go to CloudFront -> Open the CloudFront Distribution that
+we have created
+Open Error Pages click on Create custom error response
+
+After that click on Save Changes if we anything like
+URL/random_string
+we can see the error Page
+
+Now you can visit your Website & its Completely hosted
+by the AWS.
