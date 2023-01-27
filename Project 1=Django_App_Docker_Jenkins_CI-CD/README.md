@@ -261,7 +261,7 @@ sudo docker build . -t todo
 After Successfully image is built run the image by
 
 ```
-sudo docker run --name todo -d -p 8000:800 todo
+sudo docker run --name todo -d -p 8000:8000 todo
 ```
 
 Here Container-name --> todo , -d --> detached mode , -p -->Expose port 8000
